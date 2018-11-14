@@ -264,5 +264,6 @@
 #endif
 
 #include "globals.h"
+#include "turing.h"
 
 #endif /* COLLECTD_H */
