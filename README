@@ -13,6 +13,12 @@ About
 Features
 --------
 
+  * turing version of collectd added extra configuration options:
+
+    - ZenoFile
+    the absolution path to zeno config.json file, if set, it will
+    read device_id value from it and override hostname.
+
   * collectd is able to collect the following data:
 
     - apache
