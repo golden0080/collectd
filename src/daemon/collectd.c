@@ -82,8 +82,10 @@ static void sig_usr1_handler(int __attribute__((unused)) signal) {
 static int init_hostname(void) {
   const char *zeno_file = global_option_get("ZenoFile");
   if ((zeno_file != NULL) && (zeno_file[0] != 0)) {
-    if (turing_hostname_set(zeno_file))
+    fprintf(stdout, "Zeno config read from: %s\n", zeno_file);
+    if (turing_hostname_set(zeno_file)) {
       return 0;
+    }
   }
 
   const char *str = global_option_get("Hostname");
